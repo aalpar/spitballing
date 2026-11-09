@@ -2,6 +2,8 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+**Status:** Executed. Tasks 1–5 are in `tools/spitball/` and `tools/eval/`; Tasks 6–10 results are in `docs/ablation/2026-11-08-skill-evals.md`. The checkboxes were not ticked during execution.
+
 **Goal:** Make the spitballing skill run for installed users and agree with its kernel, then test its behaviour before changing its wording.
 
 **Architecture:** Phase A fixes three mechanical defects in the kernel/skill seam, each with a failing unittest first. Phase B adds an eval harness that runs the skill headlessly via `claude -p`, validates the artifacts it writes, and audits the transcript for process compliance (panel spawns, prompt leaks). Phase C uses that harness to run a baseline before each behavioural change; three of its tasks end at a decision gate for the owner rather than a code change.

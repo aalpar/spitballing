@@ -1,5 +1,6 @@
 {
   "value_criterion": "a short product name that communicates cooling the head",
+  "measured": true,
   "predicates": ["COOLING", "HEAD", "literal", "cooling-not-comfort"],
   "obvious_clusters": [
     {"label": "cool", "panelist_count": 12, "frac": 1.0,

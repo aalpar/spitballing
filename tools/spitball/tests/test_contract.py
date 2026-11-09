@@ -133,13 +133,11 @@ class TestCandidateRecordContract(unittest.TestCase):
     def test_committed_runs_pass_the_validator(self):
         """`obvious` and `in_band` are written by the conductor but *derived* by
         band.py. result.md is not checked: committed runs predate later kernel
-        changes (1ec5be7 reweighting, a925ec6 label fix). They also predate the
-        `measured` field, so its absence alone is excused."""
+        changes (1ec5be7 reweighting, a925ec6 label fix)."""
         for path, _ in self._records():
             with self.subTest(run=path.parent.name):
                 problems = validate_run(path.parent, check_result=False)
-                self.assertEqual([p for p in problems
-                                  if not p.startswith("map.json: missing measured")], [])
+                self.assertEqual(problems, [])
 
 
 class TestRankingWeightIsPinned(unittest.TestCase):

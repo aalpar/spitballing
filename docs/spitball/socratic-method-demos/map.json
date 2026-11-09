@@ -1,5 +1,6 @@
 {
   "value_criterion": "a concrete way to SHOW the Socratic method working (questioning that exposes a hidden assumption or contradiction) so an audience grasps how it operates; must enact questioning-to-expose, not lecture about Socrates",
+  "measured": true,
   "predicates": ["ENACTS", "QUESTIONING", "EXPOSES", "DEMONSTRATION", "LIVE_BELIEF"],
   "obvious_clusters": [
     {"label": "break_test", "panelist_count": 12, "frac": 1.0,
