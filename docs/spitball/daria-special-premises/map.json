@@ -1,5 +1,6 @@
 {
   "value_criterion": "a premise that is unmistakably Daria (deadpan-cynic voice, Lawndale, satire of conformity/media) and sustains a 90-minute story; not a re-tread of the two existing TV movies",
+  "measured": true,
   "predicates": ["VOICE", "LAWNDALE", "SATIRE", "MOVIE_SCALE", "NOT_RETREAD", "DARIA_CENTERED"],
   "obvious_clusters": [
     {"label": "doc_reality", "panelist_count": 9, "frac": 0.75,

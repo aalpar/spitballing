@@ -34,7 +34,7 @@ write_manifest(manifest, path) -> None
 import json
 import os
 
-from tools.ablation.build_hits import Assignment, render_question_xml
+from attic.ablation.build_hits import Assignment, render_question_xml
 
 # ---------------------------------------------------------------------------
 # Endpoint constants
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     import sys
     import tempfile
 
-    from tools.ablation.build_hits import (
+    from attic.ablation.build_hits import (
         build_assignments,
         load_rated_set,
     )

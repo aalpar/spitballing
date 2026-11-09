@@ -140,15 +140,39 @@
    "mechanism": "weather/blackout bottle episode trapping an odd group (aired precedent: Antisocial Climbers)"
   }
  ],
- "below_cutoff": [
-  "competition (mock trial, debate) 2/12",
-  "daria_job 1/12",
-  "daria_expose 1/12",
-  "demartino_politics 1/12",
-  "kb_detectives 1/12",
-  "media_crew 1/12",
-  "agreeable_foil 1/12",
-  "fashion_club_outcast 1/12"
+ "sub_cutoff_clusters": [
+  {
+   "label": "competition (mock trial, debate)",
+   "panelist_count": 2
+  },
+  {
+   "label": "daria_job",
+   "panelist_count": 1
+  },
+  {
+   "label": "daria_expose",
+   "panelist_count": 1
+  },
+  {
+   "label": "demartino_politics",
+   "panelist_count": 1
+  },
+  {
+   "label": "kb_detectives",
+   "panelist_count": 1
+  },
+  {
+   "label": "media_crew",
+   "panelist_count": 1
+  },
+  {
+   "label": "agreeable_foil",
+   "panelist_count": 1
+  },
+  {
+   "label": "fashion_club_outcast",
+   "panelist_count": 1
+  }
  ],
  "negative_fringe": [
   {

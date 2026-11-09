@@ -453,7 +453,7 @@ if __name__ == "__main__":
             checks_data = json.load(fh)
 
     # Pull from MTurk.
-    from tools.ablation.post_hits import client as mturk_client  # noqa: PLC0415
+    from attic.ablation.post_hits import client as mturk_client  # noqa: PLC0415
     mturk = mturk_client(args.env)
     raw_answers = pull(mturk, manifest_data)
 

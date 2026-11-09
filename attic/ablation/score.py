@@ -46,7 +46,7 @@ import os
 import numpy as np
 from scipy import stats
 
-from tools.ablation.reliability import krippendorff_alpha
+from attic.ablation.reliability import krippendorff_alpha
 
 
 # ---------------------------------------------------------------------------

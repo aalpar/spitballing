@@ -1,7 +1,7 @@
 # Engine Ablation Harness — Pre-Registration
 
 **Status:** BINDING — must be committed BEFORE any generation or data collection.
-**Study:** Engine Ablation Harness (Part B of the Diverge Engine Matrix design).
+**Study:** Engine Ablation Harness.
 **Date committed:** 2026-06-02
 
 This document fixes the hypotheses, arms, dimensions, thresholds, exclusion rules, and
@@ -69,8 +69,8 @@ blinding failure, which remains an open prerequisite to posting.
 
 Each hypothesis states a **directional prediction** but is **tested two-sided**: the
 statistical test can detect — and the report must surface — an effect in *either*
-direction, including the reverse of the prediction. The research-grounding section of the
-design spec motivates these predictions but does not establish them — they are things
+direction, including the reverse of the prediction. Prior creativity research motivates these
+predictions but does not establish them — they are things
 under test, not priors.
 
 **H1 — Engines beat straight on originality.**
@@ -267,8 +267,7 @@ is not used to confirm a Phase-1 winner already in hand.
 
 ## 7. Honesty Framing
 
-The design spec's Research-grounding section (§ "Research grounding") cites established
-creativity-research findings that motivate H1 and H2. That motivation does not constitute
+Established creativity-research findings motivate H1 and H2. That motivation does not constitute
 evidence for those hypotheses in the Spitballing context. The analysis decisions — which
 dimensions to report, how to handle inconclusive dimensions, whether to claim transfer —
 are fixed here and will not be adjusted after the results are in hand.

@@ -69,14 +69,15 @@ The pipeline is small; the discipline around it is the point.
 - **Contract tests** bind the skill text, the kernel, and the artifact formats
   so a change to one that breaks another fails `make test`.
 
-The ablation study below is retired (code in `attic/`); its documents remain
-as a record.
+The ablation study below is retired. Its rating-collection and scoring code is
+in `attic/`; its generation workflow and canon-fidelity judge were deleted. Its
+documents remain as a record.
 
 - **Pre-registered ablations.** The engine ablation study fixes hypotheses,
   arms, thresholds, and exclusion rules before any data collection
   ([`docs/ablation/preregistration.md`](docs/ablation/preregistration.md));
   amendments are legitimate only pre-data.
-- **Frozen ground truth.** The canon-fidelity judge scores against a
+- **Frozen ground truth.** The canon-fidelity judge scored against a
   human-authored, one-page canon of checkable, discriminative constraints
   ([`docs/ablation/canon-daria.md`](docs/ablation/canon-daria.md)). Revising
   the canon is a new study condition, not a silent edit.
