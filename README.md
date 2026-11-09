@@ -1,25 +1,25 @@
 # Spitballing
 
-Creativity is a methodical search bounded by constraints — the empty space
+Creativity is a methodical search bounded by constraints: the empty space
 between *what fulfills a request* and *what is obvious*. This plugin finds that
 space and samples it.
 
 It ships as a [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
 plugin: the `spitballing` skill does the semantic judgment; a small Python
-kernel (`tools/spitball/`) does every piece of arithmetic — cutoffs, band
-filtering, ranking — so no threshold ever lives inside a prompt.
+kernel (`tools/spitball/`) does every piece of arithmetic (cutoffs, band
+filtering, ranking).
 
 ## How it works
 
 Given a request, three stages:
 
-1. **MAP** — a blind panel of 12 independent agents reveals the **obvious set**
+1. **MAP**: a blind panel of 12 independent agents reveals the **obvious set**
    (anything ≥25% of them spontaneously produce) and names the **negative
    fringe** (what almost-fulfills-but-fails).
-2. **SAMPLE** — generates candidates aimed at the **band**: high value, low
+2. **SAMPLE**: generates candidates aimed at the **band**: high value, low
    obviousness, hugging the negative border.
-3. **CONVERGE** — scores each candidate (fulfillment, plus obviousness via a
-   membership test against the mapped clusters — not re-polling), filters the
+3. **CONVERGE**: scores each candidate (fulfillment, plus obviousness via a
+   membership test against the mapped clusters), filters the
    band, and ranks to a final 3–5. Ranking favors surprise over safety
    (`0.6·fringe + 0.4·value`), with value as the floor.
 
@@ -35,7 +35,7 @@ non-obvious options and never picks for you.
 Requires `python3` on `PATH` (stdlib only). From a local checkout, `make install`
 registers the checkout as a marketplace and installs or updates the plugin.
 
-Then invoke the skill with a request — *"new names for a product that keeps
+Then invoke the skill with a request: *"new names for a product that keeps
 the head cool."* Output lands in `docs/spitball/<topic-slug>/` as a candidates
 JSONL, the panel map, and a ranked result.
 
@@ -52,8 +52,8 @@ renders the kernel's own verdict and cannot drift from it.
 Five complete runs ship in [`docs/spitball/`](docs/spitball/). The
 [Socratic-method run](docs/spitball/socratic-method-demos/result.md) opens with
 its own failure finding: all 12 blind panelists answered a different question
-than the one asked — they produced questioning *techniques* rather than ways to
-*demonstrate* the method. The map stage surfaced that drift as data (12/12
+than the one asked: they produced questioning *techniques* rather than ways to
+*demonstrate* the method. The map stage surfaced that misreading as data (12/12
 clustering on the wrong target) before sampling began, instead of leaving it to
 taste after the fact.
 
@@ -61,14 +61,13 @@ taste after the fact.
 
 The pipeline is small; the discipline around it is the point.
 
-- **Deterministic kernel / semantic judge separation.** The model never does
-  arithmetic. `python -m tools.spitball obvious|rank|fringe-check` pipes JSON
+- **Deterministic kernel / semantic judge separation.** `python -m tools.spitball obvious|rank|fringe-check` pipes JSON
   in, JSON out. Changing a threshold is a diff, not prompt archaeology.
 - **Membership tests, not re-polling.** A candidate's obviousness is decided
   against the frozen panel map; re-polling a fresh panel would show it the
   candidate and bias the verdict.
 - **Contract tests** bind the skill text, the kernel, and the artifact formats
-  so the three cannot drift apart (`make test`).
+  so a change to one that breaks another fails `make test`.
 
 The ablation study below is retired (code in `attic/`); its documents remain
 as a record.
@@ -95,7 +94,7 @@ as a record.
     docs/spitball/<run>/          complete runs: candidates.jsonl, map.json, result.md
     docs/ablation/                preregistration, findings, canon ground truth
     docs/specs/                   design docs
-    attic/                        retired ablation harness and its specs
+    attic/                        retired ablation harness
 
 ## License
 

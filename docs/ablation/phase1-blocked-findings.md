@@ -9,11 +9,11 @@ fails and matched inputs do not address content-leak.
 **Design:** Amendment A2 — each input (20 background chains + 20 seed walks) is a *block*
 run through all four arms {random-seed, inversion, lens-shift, straight}, one idea per
 (block × arm), keyed by an immutable `block_id` (`"<source>:<index>"`). See
-`preregistration.md` §0 A2 and `attic/specs/2026-06-03-matched-input-blocked-ablation.md`.
+`preregistration.md` §0 A2.
 
 ## What was run
 
-1. **Blocked generation** — `funnel.js` cycle mode, `includeStraight:true` **and
+1. **Blocked generation** — the deleted funnel workflow, cycle mode, `includeStraight:true` **and
    `blocked:true`** (the blocked design is opt-in; without the flag the funnel runs its
    general multi-idea cycle), 20 chains +
    20 seeds × 4 arms → **160 ideas**, one per (block × arm). All 8 cells exactly 25→20-as-

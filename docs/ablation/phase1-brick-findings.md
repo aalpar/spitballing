@@ -3,9 +3,9 @@
 **Date:** 2026-06-02
 **Status:** Synthetic validation only — **no paid/human ratings collected.** All ratings
 below are from blind LLM-rater panels standing in for the crowd, used to validate the
-instrument and exercise `tools/ablation/score.py` (now `attic/ablation/score.py`) before any spend.
+instrument and exercise `attic/ablation/score.py` before any spend.
 **Topic:** "novel uses for a brick" (Alternative Uses Task — the Daria-free Phase-1
-methodology topic; see the engine-ablation design spec and `preregistration.md`).
+methodology topic; see `preregistration.md`).
 
 ## What was run
 
@@ -13,7 +13,7 @@ methodology topic; see the engine-ablation design spec and `preregistration.md`)
    tag `engine`/`source` correctly.
 2. **Background** run on the brick → 20 affordance chains (mass, thermal, abrasion,
    porosity, geometry, hardness, kinetic, aesthetic).
-3. **Full generate** — `funnel.js` cycle mode, `includeStraight:true`, 8 cells × 25 ideas,
+3. **Full generate** — the deleted funnel workflow, cycle mode, `includeStraight:true`, 8 cells × 25 ideas,
    background cells fed distinct chains, seed cells fed sampled WordNet seeds → 200 ideas,
    all 8 cells exactly 25, 0 malformed.
 4. **prep-ablation** — engine-fidelity judge + voice-normalization → 193 kept, 7 dropped

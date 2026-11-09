@@ -2,7 +2,6 @@
 
 **Status:** BINDING — must be committed BEFORE any generation or data collection.
 **Study:** Engine Ablation Harness (Part B of the Diverge Engine Matrix design).
-**Spec:** `attic/specs/2026-06-02-diverge-engine-matrix-and-ablation-design.md`
 **Date committed:** 2026-06-02
 
 This document fixes the hypotheses, arms, dimensions, thresholds, exclusion rules, and
