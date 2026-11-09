@@ -1,7 +1,7 @@
 # Daria — Episode Reference
 
 > Non-judge-facing reference for the canon-fidelity study. This file is NOT
-> inlined into the judge prompt — `funnel.js` embeds only `canon-daria.md`.
+> inlined into the judge prompt — the retired funnel workflow embedded only `canon-daria.md`.
 > It is provenance and grounding for human authors and audit, kept separate so
 > the scored canon stays ~1 page and discriminative (design principle: the canon
 > must DISCRIMINATE, not describe). Titles/air dates verified against Wikipedia;

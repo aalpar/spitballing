@@ -1,9 +1,8 @@
 # Spitballing — Boundary-Sampling Redesign
 
 **Date:** 2026-06-12
-**Status:** Implemented — conductor skill + tested `tools/spitball` kernel (`obvious` / `rank` / `fringe-check`); dogfooded in `docs/spitball/`. Implementation plan archived to `attic/specs/2026-06-12-spitballing-boundary-sampling.md`.
-**Supersedes:** `attic/specs/2026-06-01-spitballing-design.md` (the beam-search
-"idea-funnel"). That system diverged *blind* — random seeds, inversion, lens
+**Status:** Implemented — conductor skill + tested `tools/spitball` kernel (`obvious` / `rank` / `fringe-check`); dogfooded in `docs/spitball/`.
+**Supersedes:** the beam-search "idea-funnel" design. That system diverged *blind* — random seeds, inversion, lens
 shift — and used a multi-cycle beam search to stumble onto good ideas and prune.
 This design replaces blind divergence with **targeted boundary-sampling**: it
 maps where the obvious answers live, then generates deliberately just off them.
@@ -215,8 +214,7 @@ working tree.
 | `docs/specs/*`, `docs/ablation/*`         | **Keep**    | History/rationale; this doc joins them |
 
 > Update 2026-07-17: only this design doc remained in `docs/specs/`; the
-> superseded idea-funnel and ablation-era specs were later archived to
-> `attic/specs/`.
+> superseded idea-funnel and ablation-era specs were later archived, then removed.
 
 The seed pool dying is the clearest signal the framing actually changed: random
 nouns existed to knock generation off-center *by accident*; boundary-sampling

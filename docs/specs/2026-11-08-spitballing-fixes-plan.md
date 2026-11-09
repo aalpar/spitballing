@@ -222,7 +222,7 @@ class TestRankRecords(unittest.TestCase):
 - `make eval BRIEF=eval/briefs/<x>.json PROMPT=slash|natural|pressure SKILL_VARIANT=<path or empty> DESC_VARIANT=<path or empty> MODEL=opus`:
   1. Stage the plugin into a temp dir (copy `.claude-plugin`, `skills`, `tools`); if set, overwrite `skills/spitballing/SKILL.md` with `SKILL_VARIANT`, or replace only its `description:` line with `DESC_VARIANT`'s.
   2. Create a sandbox cwd outside the repo.
-  3. `claude --plugin-dir <stage> --permission-mode bypassPermissions --model $(MODEL) -p "<prompt>" --output-format stream-json --verbose > transcript.jsonl` (pattern from `~/projects/crosscheck-plugin/Makefile:94-99`).
+  3. `claude --plugin-dir <stage> --permission-mode bypassPermissions --model $(MODEL) -p "<prompt>" --output-format stream-json --verbose > transcript.jsonl` (pattern from the crosscheck plugin's `Makefile`).
   4. Archive to `eval/runs/NNNN/`: `transcript.jsonl`, `manifest.txt` (brief, prompt kind, variants, model, git rev, date), the sandbox's `docs/spitball/*/` contents; then run `validate` and `audit`.
 - Prompt texts (in `eval/prompts/`, `<BRIEF>` replaced by the brief JSON, `<REQUEST>` by its request):
   - `slash`: `/spitballing:spitballing <REQUEST>. The brief is confirmed, do not ask: <BRIEF>`
