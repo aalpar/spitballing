@@ -13,7 +13,7 @@ methodology topic; see `preregistration.md`).
    tag `engine`/`source` correctly.
 2. **Background** run on the brick → 20 affordance chains (mass, thermal, abrasion,
    porosity, geometry, hardness, kinetic, aesthetic).
-3. **Full generate** — the retired funnel workflow, cycle mode, `includeStraight:true`, 8 cells × 25 ideas,
+3. **Full generate** — the deleted funnel workflow, cycle mode, `includeStraight:true`, 8 cells × 25 ideas,
    background cells fed distinct chains, seed cells fed sampled WordNet seeds → 200 ideas,
    all 8 cells exactly 25, 0 malformed.
 4. **prep-ablation** — engine-fidelity judge + voice-normalization → 193 kept, 7 dropped

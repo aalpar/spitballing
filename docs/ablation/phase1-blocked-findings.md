@@ -13,7 +13,7 @@ run through all four arms {random-seed, inversion, lens-shift, straight}, one id
 
 ## What was run
 
-1. **Blocked generation** — the retired funnel workflow, cycle mode, `includeStraight:true` **and
+1. **Blocked generation** — the deleted funnel workflow, cycle mode, `includeStraight:true` **and
    `blocked:true`** (the blocked design is opt-in; without the flag the funnel runs its
    general multi-idea cycle), 20 chains +
    20 seeds × 4 arms → **160 ideas**, one per (block × arm). All 8 cells exactly 25→20-as-
