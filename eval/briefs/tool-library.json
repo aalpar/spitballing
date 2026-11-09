@@ -1,0 +1,4 @@
+{"request": "names for a neighborhood tool-lending library",
+ "fulfillment_criterion": "a short name that communicates borrowing shared tools",
+ "output_kind": "a name",
+ "hard_constraints": []}

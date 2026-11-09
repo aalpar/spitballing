@@ -1,0 +1,33 @@
+{
+  "value_criterion": "a premise that is unmistakably Daria (deadpan-cynic voice, Lawndale, satire of conformity/media) and sustains a 90-minute story; not a re-tread of the two existing TV movies",
+  "predicates": ["VOICE", "LAWNDALE", "SATIRE", "MOVIE_SCALE", "NOT_RETREAD", "DARIA_CENTERED"],
+  "obvious_clusters": [
+    {"label": "doc_reality", "panelist_count": 9, "frac": 0.75,
+     "member_ideas": ["documentary crew films 'typical teens', Daria reluctant star", "reality-TV show about the family/gifted teens", "Daria tries to bore the filmmakers into leaving"]},
+    {"label": "cynical_foil", "panelist_count": 7, "frac": 0.583,
+     "member_ideas": ["a new student more cynical/detached than Daria", "a younger-version-of-Daria transfer", "charismatic transfer makes her question if irony is fear"]},
+    {"label": "wellness_scheme", "panelist_count": 7, "frac": 0.583,
+     "member_ideas": ["school 'wellness initiative' is a data-mining/social experiment", "tech billionaire buys the school", "relatable principal as surveillance"]},
+    {"label": "college_cynicism", "panelist_count": 6, "frac": 0.5,
+     "member_ideas": ["college essay rejected for being too cynical", "essays mixed up / forged acceptance", "recruiter won't leave her alone"]},
+    {"label": "jane_artcareer", "panelist_count": 5, "frac": 0.417,
+     "member_ideas": ["Jane's art sells out / studio wants it marketable", "Jane's graphic novel becomes a film", "Jane gallery show compromise"]},
+    {"label": "accidentally_cares", "panelist_count": 4, "frac": 0.333,
+     "member_ideas": ["mandatory passion project, she accidentally cares", "career-sim makes her a motivational speaker", "pointless cause she chose accidentally matters"]},
+    {"label": "local_politics", "panelist_count": 4, "frac": 0.333,
+     "member_ideas": ["Jodie runs for mayor/office", "DeMartino runs for school board", "Daria pulled into a campaign"]},
+    {"label": "detachment_cost", "panelist_count": 3, "frac": 0.25,
+     "member_ideas": ["her indifference enabled someone's harm (complicity)", "facing a real loss her defenses fail", "grandmother's diary: detachment as cowardice"]},
+    {"label": "jane_leaves", "panelist_count": 3, "frac": 0.25,
+     "member_ideas": ["Jane gets a scholarship away, friendship reckoning", "Jane absorbed into the popular crowd"]}
+  ],
+  "negative_fringe": [
+    {"drops": "LAWNDALE", "landmark": "Daria's voice but no Lawndale / no satire engine — sardonic in a vacuum"},
+    {"drops": "SATIRE", "landmark": "a generic teen-movie plot with Daria pasted on — not ABOUT anything", "examples": ["prom", "makeover", "love triangle"]},
+    {"drops": "SATIRE", "landmark": "a genre break — abandons the realist-satire register", "examples": ["zombie outbreak", "musical"]},
+    {"drops": "DARIA_CENTERED", "landmark": "Daria absent or a bystander to a side character's plot — not 'a Daria special'"},
+    {"drops": "MOVIE_SCALE", "landmark": "an extended episode, no movie-scale stakes"},
+    {"drops": "VOICE", "landmark": "Lawndale and the satire engine intact but Daria written earnest/sincere — the deadpan-cynic voice is gone", "examples": ["earnest coming-of-age", "sincere romance played straight", "inspirational-teacher arc"]},
+    {"drops": "NOT_RETREAD", "landmark": "unmistakably Daria but re-runs an existing TV movie — Is It Fall Yet? (summer-away self-discovery) or Is It College Yet? (applications + graduation send-off)", "examples": ["another art-colony summer", "another college-applications arc", "the graduation send-off again"]}
+  ]
+}

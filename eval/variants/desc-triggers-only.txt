@@ -1,0 +1,1 @@
+description: 'Use when the user wants several creative options for a request (names, titles, concepts, angles, premises) and generic answers won''t do: "less obvious", "something original", "give me options for". Not for refining one idea into a design; that is brainstorming.'

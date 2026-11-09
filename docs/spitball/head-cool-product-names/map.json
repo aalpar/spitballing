@@ -1,0 +1,26 @@
+{
+  "value_criterion": "a short product name that communicates cooling the head",
+  "predicates": ["COOLING", "HEAD", "literal", "cooling-not-comfort"],
+  "obvious_clusters": [
+    {"label": "cool", "panelist_count": 12, "frac": 1.0,
+     "member_ideas": ["CoolCap", "CoolHead", "CoolMind", "CoolZone", "CoolVault", "CoolVent"]},
+    {"label": "frost", "panelist_count": 12, "frac": 1.0,
+     "member_ideas": ["FrostBrow", "FrostCap", "FrostHalo", "FrostCrown", "FrostMind", "FrostShield"]},
+    {"label": "chill", "panelist_count": 12, "frac": 1.0,
+     "member_ideas": ["ChillZone", "ChillCap", "ChillCrown", "HeadChill", "BrainChill", "ChillShield"]},
+    {"label": "airflow", "panelist_count": 12, "frac": 1.0,
+     "member_ideas": ["HeadFlow", "CoolVent", "BreezeLock", "VentilateHub", "AirVent Pro", "AeroCoil"]},
+    {"label": "ice", "panelist_count": 11, "frac": 0.917,
+     "member_ideas": ["IceHalo", "IceCap", "IceThink", "IceMind", "IceVault", "IceShield"]},
+    {"label": "mental", "panelist_count": 9, "frac": 0.75,
+     "member_ideas": ["CoolMind", "IceThink", "CalmCap", "ZenFreeze", "CerebralChill", "IceThought"]},
+    {"label": "therma", "panelist_count": 8, "frac": 0.667,
+     "member_ideas": ["ThermaDrop", "ThermaCap", "ThermaCool", "ThermaHead", "CryoComfort", "ThermalCrown"]}
+  ],
+  "negative_fringe": [
+    {"drops": "HEAD", "landmark": "evokes cold but not the head — generic cold, no cranial reference", "examples": ["Glacier", "Frostbite", "IceCube"]},
+    {"drops": "COOLING", "landmark": "evokes the head but not cooling — head, no temperature relief", "examples": ["Cranium", "Noggin", "Crown"]},
+    {"drops": "literal", "landmark": "figurative 'cool head' = composure, not physical temperature", "examples": ["KeepCalm", "Poise", "Composure"]},
+    {"drops": "cooling-not-comfort", "landmark": "evokes general comfort, not specifically cooling", "examples": ["Comfy", "Cushion", "Plush"]}
+  ]
+}

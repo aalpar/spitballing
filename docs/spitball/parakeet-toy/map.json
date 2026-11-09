@@ -1,0 +1,195 @@
+{
+ "value_criterion": "a physical object or setup a pet budgie would voluntarily and repeatedly engage with, offering novel stimulation (foraging, manipulation, sound, social, movement) beyond what standard cage toys give",
+ "measured": true,
+ "predicates": [
+  "PHYSICAL",
+  "BUDGIE-FIT",
+  "SELF-MOTIVATED",
+  "REPEATED",
+  "NOVEL"
+ ],
+ "obvious_clusters": [
+  {
+   "label": "hidden-food-foraging",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "note": "merged forage-container (tear open to reach food, 12/12) and puzzle-mechanism (lids/drawers/wheel, 12/12): both work through the foraging drive",
+   "member_ideas": [
+    "Shreddable Paper Pinata",
+    "Millet Pinata",
+    "Foraging Ball (woven willow/rattan with millet)",
+    "Foraging Treat Wheel",
+    "Puzzle Cups",
+    "Foraging Cup Tower",
+    "Puzzle Drawer Box",
+    "Treat Puzzle Box",
+    "Bottle-Cap Treasure Chest"
+   ]
+  },
+  {
+   "label": "mirror-social",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "member_ideas": [
+    "Mirror Bell Swing",
+    "Mirror Buddy Swing",
+    "Mirror Bell Pal"
+   ]
+  },
+  {
+   "label": "bead-manipulate",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "member_ideas": [
+    "Bead Abacus",
+    "Bead Abacus Ladder",
+    "Bead Abacus Perch",
+    "Bead Ladder"
+   ]
+  },
+  {
+   "label": "shred-chew",
+   "panelist_count": 11,
+   "frac": 0.917,
+   "member_ideas": [
+    "Shreddable Paper Tassel",
+    "Shredding Tower",
+    "Sola Wood Flower Kabob",
+    "Sola Ball Stack",
+    "Kabob Stack",
+    "Treat Kebab",
+    "Bottle-Cap Kebab",
+    "Cuttlebone Chew Stack",
+    "Cork Wall Perch"
+   ]
+  },
+  {
+   "label": "climb",
+   "panelist_count": 9,
+   "frac": 0.75,
+   "member_ideas": [
+    "Bell Ladder",
+    "Ladder Bridge",
+    "Rope Ladder Bridge"
+   ]
+  },
+  {
+   "label": "bath",
+   "panelist_count": 8,
+   "frac": 0.667,
+   "member_ideas": [
+    "Sprinkler Bath Perch",
+    "Bath Bubble Dish",
+    "Bath Bowl Bobbers",
+    "Bath Splash Dish",
+    "Bathing Leaf Splash Pad"
+   ]
+  },
+  {
+   "label": "bouncy-perch",
+   "panelist_count": 6,
+   "frac": 0.5,
+   "member_ideas": [
+    "Rope Boing",
+    "Rope Bungee Perch",
+    "Wobble Swing Ring"
+   ]
+  },
+  {
+   "label": "foot-toy",
+   "panelist_count": 3,
+   "frac": 0.25,
+   "member_ideas": [
+    "Vine Ball Toss",
+    "Jingle Foot Toy",
+    "Foot Toy Basket",
+    "Vine Ball Chain"
+   ]
+  }
+ ],
+ "sub_cutoff_clusters": [
+  {
+   "label": "noisemaker-hanging",
+   "panelist_count": 2,
+   "member_ideas": [
+    "Bottle Cap Chain",
+    "Spinning Wheel Chime"
+   ]
+  },
+  {
+   "label": "tunnel-hide",
+   "panelist_count": 1,
+   "member_ideas": [
+    "Seagrass Mat Tunnel"
+   ]
+  }
+ ],
+ "negative_fringe": [
+  {
+   "drops": "PHYSICAL",
+   "kind": "leave-one-out",
+   "landmark": "enrichment with no object: a routine, a game run by the owner, a sound or video feed",
+   "examples": [
+    "Daily target-training session",
+    "Looping flock-chatter radio",
+    "Budgie TV"
+   ]
+  },
+  {
+   "drops": "BUDGIE-FIT",
+   "kind": "leave-one-out",
+   "landmark": "a great toy for another species or a large parrot; wrong scale, strength, or drive",
+   "examples": [
+    "Macaw hardwood puzzle block",
+    "Cat feather wand",
+    "Hamster wheel"
+   ]
+  },
+  {
+   "drops": "SELF-MOTIVATED",
+   "kind": "leave-one-out",
+   "landmark": "engagement driven by the owner, or a gadget for the owner's amusement rather than the bird's",
+   "examples": [
+    "Clicker-trick prop kit",
+    "Flight harness",
+    "Budgie photo booth"
+   ]
+  },
+  {
+   "drops": "REPEATED",
+   "kind": "leave-one-out",
+   "landmark": "one-shot novelty: consumed, solved, or habituated after the first session",
+   "examples": [
+    "Single-use surprise box",
+    "Seasonal ornament"
+   ]
+  },
+  {
+   "drops": "NOVEL",
+   "kind": "leave-one-out",
+   "landmark": "a standard cage toy: another bell, mirror, or ladder",
+   "examples": [
+    "Plain stainless bell",
+    "Basic acrylic mirror"
+   ]
+  },
+  {
+   "drops": "SELF-MOTIVATED",
+   "kind": "sense-swap",
+   "landmark": "'love' in the pair-bond sense: an object the bird courts or treats as a mate, a hormonal trigger rather than play",
+   "examples": [
+    "Lifelike budgie decoy",
+    "Nest-box hideaway"
+   ]
+  },
+  {
+   "drops": "BUDGIE-FIT",
+   "kind": "sense-swap",
+   "landmark": "'toy' as miniature or figurine: a toy parakeet for a person",
+   "examples": [
+    "Plush budgie",
+    "Parakeet figurine"
+   ]
+  }
+ ]
+}

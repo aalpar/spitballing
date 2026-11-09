@@ -1,0 +1,4 @@
+{"request": "new names for a product that keeps the head cool",
+ "fulfillment_criterion": "a short product name that communicates cooling the head",
+ "output_kind": "a product name",
+ "hard_constraints": ["exactly 4 letters", "a real English word"]}

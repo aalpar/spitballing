@@ -1,0 +1,12 @@
+{
+  "name": "spitballing",
+  "version": "0.3.0",
+  "description": "Boundary-sampling idea generation — maps where the obvious answers live with a blind panel, then samples the high-value/non-obvious band and returns a measured 3–5. Creativity as methodical search, not a muse.",
+  "author": {
+    "name": "Aaron Alpar",
+    "email": "aaron.alpar@gmail.com"
+  },
+  "repository": "https://github.com/aalpar/spitballing",
+  "license": "Apache-2.0",
+  "keywords": ["creativity", "ideation", "divergent-thinking", "convergence", "boundary-sampling", "skill"]
+}

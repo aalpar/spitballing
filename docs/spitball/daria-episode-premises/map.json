@@ -1,0 +1,214 @@
+{
+ "value_criterion": "unmistakably Daria (deadpan-cynic voice, Lawndale ensemble, satire of conformity/media/consumer culture), resolves within one ~22-minute episode, and is not the premise of an aired episode",
+ "measured": true,
+ "predicates": [
+  "VOICE",
+  "LAWNDALE",
+  "SATIRE",
+  "EPISODE_SCALE",
+  "NOT_AIRED"
+ ],
+ "obvious_clusters": [
+  {
+   "label": "jane_art",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "member_ideas": [
+    "Jane's art bought by a tech-bro / turned into NFTs",
+    "Jane's art picked for a corporate mural / coffee chain",
+    "critic raves but completely misreads Jane's work",
+    "Jane's painting goes viral for the wrong reasons",
+    "gallery wants Jane to play a tortured-artist persona"
+   ],
+   "mechanism": "Jane's art meets an outside audience (buyer, critic, viral) that distorts or commodifies it"
+  },
+  {
+   "label": "school_imposes",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "member_ideas": [
+    "AI hall monitors; Daria is the one it can't classify",
+    "AI tutor / AI guidance counselor",
+    "surveillance cameras / hall-monitor drones",
+    "wellness app scores happiness, flags Daria",
+    "corporate wellness influencer to raise morale",
+    "corporate sponsor renames the school / ad reads before class",
+    "mandatory spirit week",
+    "restorative-justice feelings circle"
+   ],
+   "mechanism": "the school installs a program/system/sponsor and Daria resists or is its anomaly (aired precedent: Fizz Ed, Esteemsters, The Old and the Beautiful)"
+  },
+  {
+   "label": "parents_intrude",
+   "panelist_count": 10,
+   "frac": 0.833,
+   "member_ideas": [
+    "Jake gets into life coaching / motivational speaking, family is test audience",
+    "Jake's men's retreat in the woods",
+    "family signs up for reality TV / home makeover",
+    "Helen's corporate retreat / digital detox / bonding therapy",
+    "Helen's legal case collides with Lawndale (vs. school, vs. polluter, vs. Sick Sad World)",
+    "Helen loses a case and is home all day"
+   ],
+   "mechanism": "a parent's fad, self-improvement scheme, or job lands on the household (aired precedent: Psycho Therapy)"
+  },
+  {
+   "label": "daria_work_public",
+   "panelist_count": 9,
+   "frac": 0.75,
+   "member_ideas": [
+    "Daria's cynical essay wins a contest / read as sincere / printed in a corporate brochure",
+    "acid essay in a national magazine makes her a hometown hero",
+    "her sarcastic online reviews go viral, school recruits her for PR",
+    "Daria drafted as the face of positivity",
+    "she's alarmingly good at writing fake product reviews",
+    "anonymous essay goes viral and everyone claims it",
+    "letter to future self read aloud",
+    "Fashion Club book club picks her anonymous story"
+   ],
+   "mechanism": "Daria's cynical writing/voice/persona reaches an audience that embraces or misreads it (aired precedent: The Lost Girls, The Story of D)"
+  },
+  {
+   "label": "viral_shallow",
+   "panelist_count": 8,
+   "frac": 0.667,
+   "member_ideas": [
+    "Fashion Club goes viral on a short-video app, Daria the 'cringe sister'",
+    "Quinn becomes a lifestyle brand / wellness influencer",
+    "Fashion Club reality show casts Daria as the token cynic",
+    "Kevin and Brittany's podcast outranks Daria's worldview",
+    "Sandi as brand manager"
+   ],
+   "mechanism": "a shallow character (Fashion Club, Kevin/Brittany) gets a media platform"
+  },
+  {
+   "label": "band",
+   "panelist_count": 7,
+   "frac": 0.583,
+   "member_ideas": [
+    "Mystik Spiral gets a record deal and sells out",
+    "label wants Daria to write the lyrics",
+    "the band lands a gig: a kids' birthday party / opening for a band they mocked",
+    "keep the band awake and sober long enough to play"
+   ],
+   "mechanism": "Mystik Spiral gets success, a deal, or a gig"
+  },
+  {
+   "label": "demartino_temper",
+   "panelist_count": 6,
+   "frac": 0.5,
+   "member_ideas": [
+    "DeMartino health scare leaves him unnervingly calm",
+    "DeMartino runs the mindfulness program",
+    "court-ordered anger management, Daria and Jane end up in his group",
+    "his blood pressure becomes an extra-credit project"
+   ],
+   "mechanism": "DeMartino's rage is treated/removed/measured; the altered trait unsettles everyone"
+  },
+  {
+   "label": "kb_breakup",
+   "panelist_count": 6,
+   "frac": 0.5,
+   "member_ideas": [
+    "Kevin and Brittany break up, school splits into factions, Daria is the neutral mediator",
+    "the breakup triggers a student-council succession crisis"
+   ],
+   "mechanism": "Kevin and Brittany split and the school factionalizes around Daria as mediator"
+  },
+  {
+   "label": "quinn_hidden_depth",
+   "panelist_count": 5,
+   "frac": 0.417,
+   "member_ideas": [
+    "Quinn caught reading a library book / correcting grammar, popularity crashes",
+    "Quinn asks Daria how to be a respected outcast / build an ironic persona",
+    "Daria tutors Quinn, who likes the book",
+    "Quinn tutors a freshman who is a younger Daria"
+   ],
+   "mechanism": "a popular character's hidden intellect surfaces or they seek Daria's outsider skills (aired precedent: Quinn the Brain)"
+  },
+  {
+   "label": "trapped",
+   "panelist_count": 4,
+   "frac": 0.333,
+   "member_ideas": [
+    "snowstorm traps Daria and Jane in a 24-hour diner",
+    "blackout traps Daria, Quinn, Kevin, Brittany in the library",
+    "snowstorm traps an odd group in the school overnight",
+    "blizzard strands DeMartino at the Morgendorffer house"
+   ],
+   "mechanism": "weather/blackout bottle episode trapping an odd group (aired precedent: Antisocial Climbers)"
+  }
+ ],
+ "below_cutoff": [
+  "competition (mock trial, debate) 2/12",
+  "daria_job 1/12",
+  "daria_expose 1/12",
+  "demartino_politics 1/12",
+  "kb_detectives 1/12",
+  "media_crew 1/12",
+  "agreeable_foil 1/12",
+  "fashion_club_outcast 1/12"
+ ],
+ "negative_fringe": [
+  {
+   "drops": "VOICE",
+   "kind": "leave-one-out",
+   "landmark": "Lawndale and a satire target intact, but Daria written sincere: she earnestly embraces the thing",
+   "examples": [
+    "Daria joins a cause and is wholeheartedly inspired",
+    "Daria falls for a boy, played straight"
+   ]
+  },
+  {
+   "drops": "LAWNDALE",
+   "kind": "leave-one-out",
+   "landmark": "Daria's voice and a satire target, but cut off from the ensemble and town: Daria alone among strangers",
+   "examples": [
+    "Daria interns at a Silicon Valley startup",
+    "Daria on a cruise ship with no one she knows"
+   ]
+  },
+  {
+   "drops": "SATIRE",
+   "kind": "leave-one-out",
+   "landmark": "voice and ensemble intact, but the episode isn't ABOUT anything: hangout or sitcom-mechanics plot",
+   "examples": [
+    "Daria and Jane lose the remote",
+    "Jane's birthday surprise goes wrong"
+   ]
+  },
+  {
+   "drops": "EPISODE_SCALE",
+   "kind": "leave-one-out",
+   "landmark": "unmistakably Daria and satirical, but needs a movie or a serial arc to land",
+   "examples": [
+    "the Morgendorffers move away",
+    "Daria's senior-year relationship arc resolved"
+   ]
+  },
+  {
+   "drops": "NOT_AIRED",
+   "kind": "leave-one-out",
+   "landmark": "perfectly Daria and episode-sized, but already aired",
+   "examples": [
+    "corporate soda sponsorship takes over school (Fizz Ed)",
+    "Helen's corporate family-therapy retreat (Psycho Therapy)",
+    "Quinn tries on a smart persona (Quinn the Brain)",
+    "Daria and Jane make a documentary (Monster)",
+    "a self-esteem class (Esteemsters)",
+    "Daria's essay wins a contest and is called edgy (The Lost Girls)",
+    "snowstorm strands the class; DeMartino at the parents' cabin (Antisocial Climbers)",
+    "Daria made to smile at a job (It Happened One Nut)"
+   ]
+  },
+  {
+   "drops": "VOICE",
+   "kind": "sense-swap",
+   "landmark": "'cynic' read as mean snark rather than disillusioned idealist: insult comedy with no insight",
+   "examples": [
+    "Daria roasts the cheerleaders for 22 minutes"
+   ]
+  }
+ ]
+}

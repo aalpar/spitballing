@@ -1,0 +1,15 @@
+{
+  "name": "spitballing-marketplace",
+  "owner": {
+    "name": "Aaron Alpar",
+    "email": "aaron.alpar@gmail.com"
+  },
+  "description": "Spitballing: boundary-sampling idea generation for Claude Code.",
+  "plugins": [
+    {
+      "name": "spitballing",
+      "source": "./",
+      "description": "Boundary-sampling idea generation — map the obvious set, sample the non-obvious band, return a measured 3–5."
+    }
+  ]
+}

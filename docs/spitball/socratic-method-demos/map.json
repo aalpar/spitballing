@@ -1,0 +1,31 @@
+{
+  "value_criterion": "a concrete way to SHOW the Socratic method working (questioning that exposes a hidden assumption or contradiction) so an audience grasps how it operates; must enact questioning-to-expose, not lecture about Socrates",
+  "predicates": ["ENACTS", "QUESTIONING", "EXPOSES", "DEMONSTRATION", "LIVE_BELIEF"],
+  "obvious_clusters": [
+    {"label": "break_test", "panelist_count": 12, "frac": 1.0,
+     "member_ideas": ["ask 'what would break if that were true?'", "what's the smallest change that flips the answer?", "remove a constraint and watch them rebuild"]},
+    {"label": "contradiction_pair", "panelist_count": 12, "frac": 1.0,
+     "member_ideas": ["present two contradictory expert quotes, ask which", "earlier you said X, now Y — which is it?", "two conflicting student answers, which survives?"]},
+    {"label": "predict_reveal", "panelist_count": 9, "frac": 0.75,
+     "member_ideas": ["predict the outcome, then show reality, ask why it failed", "predict code output before running", "if true, what would you expect to see?"]},
+    {"label": "counterexample", "panelist_count": 7, "frac": 0.583,
+     "member_ideas": ["have them generate a counterexample to their own rule", "build a toy example that yields an absurd result"]},
+    {"label": "steelman", "panelist_count": 7, "frac": 0.583,
+     "member_ideas": ["steelman the opposing view first", "defend against the stupidest objection", "play devil's advocate against their own conclusion"]},
+    {"label": "teach_back", "panelist_count": 7, "frac": 0.583,
+     "member_ideas": ["explain it to someone who knows nothing", "teach it back to test real understanding"]},
+    {"label": "work_backwards", "panelist_count": 6, "frac": 0.5,
+     "member_ideas": ["if that's true, what must also be true? (backwards)", "give a solved problem, ask what question it answers"]},
+    {"label": "deliberate_error", "panelist_count": 3, "frac": 0.25,
+     "member_ideas": ["restate their claim slightly wrong, watch them correct it", "deliberately misunderstand and ask them to fix you"]},
+    {"label": "five_whys", "panelist_count": 3, "frac": 0.25,
+     "member_ideas": ["keep asking 'why?' until they hit bedrock or contradict themselves"]}
+  ],
+  "negative_fringe": [
+    {"drops": "ENACTS", "landmark": "lecturing ABOUT Socrates — describes, never enacts the questioning", "examples": ["life", "trial", "history"]},
+    {"drops": "DEMONSTRATION", "landmark": "a bare list of questioning techniques — the obvious set; classroom moves, not a demonstration medium"},
+    {"drops": "QUESTIONING", "landmark": "a formal debate — two sides ASSERTING, not questioning-to-expose"},
+    {"drops": "EXPOSES", "landmark": "an info-seeking Q&A or interview — questions, but to gather facts, not to collapse an assumption"},
+    {"drops": "LIVE_BELIEF", "landmark": "an abstract logic diagram with no live belief actually being tested"}
+  ]
+}

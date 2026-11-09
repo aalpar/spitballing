@@ -1,0 +1,29 @@
+# JetBrains IDE
+.idea/
+
+# OS cruft
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local tooling state (not source)
+.claude/
+.remember/
+.serena/
+.orig/
+
+# Scratch / workflow run artifacts
+tmp/
+
+# Generated run-inspector pages (make inspect)
+build/
+
+# Drafts and local-only notes
+*proposed.md
+*local.md
+
+# Eval run archives (make eval); cited by docs/ablation, kept local
+eval/runs/
