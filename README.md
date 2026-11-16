@@ -129,6 +129,11 @@ reached human ratings: instruments were validated on synthetic LLM raters
 only, and the [phase-1 blinding check failed](docs/ablation/phase1-blocked-findings.md).
 The documents remain as a record; the rating and scoring code is in `attic/`.
 
+## Bibliography
+
+Cited works and uncited related work, each tied to the part of the repo it
+bears on: [`BIBLIOGRAPHY.md`](BIBLIOGRAPHY.md).
+
 ## License
 
 Apache-2.0; see [`LICENSE`](LICENSE).
