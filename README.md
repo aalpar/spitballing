@@ -1,101 +1,126 @@
 # Spitballing
 
-Creativity is a methodical search bounded by constraints: the empty space
-between *what fulfills a request* and *what is obvious*. This plugin finds that
-space and samples it.
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-It ships as a [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
-plugin: the `spitballing` skill does the semantic judgment; a small Python
-kernel (`tools/spitball/`) does every piece of arithmetic (cutoffs, band
-filtering, ranking).
+A [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) plugin for
+non-obvious ideas. It measures where the obvious answers live with a blind
+panel, then samples the high-value, low-obviousness band and returns a ranked
+3–5.
 
-## How it works
-
-Given a request, three stages:
-
-1. **MAP**: a blind panel of 12 independent agents reveals the **obvious set**
-   (anything ≥25% of them spontaneously produce) and names the **negative
-   fringe** (what almost-fulfills-but-fails).
-2. **SAMPLE**: generates candidates aimed at the **band**: high value, low
-   obviousness, hugging the negative border.
-3. **CONVERGE**: scores each candidate (fulfillment, plus obviousness via a
-   membership test against the mapped clusters), filters the
-   band, and ranks to a final 3–5. Ranking favors surprise over safety
-   (`0.6·fringe + 0.4·value`), with value as the floor.
-
-This is the opposite end from brainstorming: brainstorming converges to ONE
-approved design through dialogue; spitballing returns a measured *set* of
-non-obvious options and never picks for you.
-
-## Install
-
-    /plugin marketplace add aalpar/spitballing
-    /plugin install spitballing@spitballing-marketplace
-
-Requires `python3` on `PATH` (stdlib only). From a local checkout, `make install`
-registers the checkout as a marketplace and installs or updates the plugin.
-
-Then invoke the skill with a request: *"new names for a product that keeps
-the head cool."* Output lands in `docs/spitball/<topic-slug>/` as a candidates
-JSONL, the panel map, and a ranked result.
-
-    make test      # kernel unit tests + SKILL.md/kernel/artifact contract tests
-    make open      # render each run in docs/spitball/ as an inspector page
-
-`make inspect` builds one page per run plotting every candidate on the two
-measured axes, marking what the kernel kept and why it cut the rest. It imports
-`tools.spitball.band` rather than reimplementing the band rule, so the page
-renders the kernel's own verdict and cannot drift from it.
+Creativity, here, is a methodical search bounded by constraints: the space
+between *what fulfills a request* and *what is obvious*.
 
 ## Example
 
-Five complete runs ship in [`docs/spitball/`](docs/spitball/). The
-[Socratic-method run](docs/spitball/socratic-method-demos/result.md) opens with
-its own failure finding: all 12 blind panelists answered a different question
-than the one asked: they produced questioning *techniques* rather than ways to
-*demonstrate* the method. The map stage surfaced that misreading as data (12/12
-clustering on the wrong target) before sampling began, instead of leaving it to
-taste after the fact.
+*"New names for a product that keeps the head cool."*
 
-## Built as evaluation infrastructure
+**Obvious set** (≥25% of a 12-agent blind panel produced it; rejected):
+`cool` 12/12 · `frost` 12/12 · `chill` 12/12 · `airflow` 12/12 · `ice` 11/12 ·
+calm puns 9/12 · `therma` 8/12
 
-The pipeline is small; the discipline around it is the point.
+**Result:**
 
-- **Deterministic kernel / semantic judge separation.** `python -m tools.spitball obvious|rank|fringe-check` pipes JSON
-  in, JSON out. Changing a threshold is a diff, not prompt archaeology.
-- **Membership tests, not re-polling.** A candidate's obviousness is decided
-  against the frozen panel map; re-polling a fresh panel would show it the
-  candidate and bias the verdict.
-- **Contract tests** bind the skill text, the kernel, and the artifact formats
+| # | Name | value | fringe | score |
+|---|------|------:|-------:|------:|
+| 1 | Oasis | 0.66 | 0.78 | 0.732 |
+| 2 | Eclipse | 0.60 | 0.76 | 0.696 |
+| 3 | Umbra | 0.68 | 0.70 | 0.692 |
+| 4 | Aurora | 0.62 | 0.74 | 0.692 |
+| 5 | Penumbra | 0.60 | 0.72 | 0.672 |
+
+Every panelist reached for a temperature word; the band leans on two metaphors
+none of them touched, *shade* and *relief*. Full run:
+[`docs/spitball/head-cool-product-names/`](docs/spitball/head-cool-product-names/result.md).
+
+## Install
+
+```
+/plugin marketplace add aalpar/spitballing
+/plugin install spitballing@spitballing-marketplace
+```
+
+Requires `python3` on `PATH` (stdlib only).
+
+## Usage
+
+Ask for options in plain language (*"give me less obvious names for…"*) or
+invoke `/spitballing:spitballing <request>`. The skill shows a brief to tweak
+once, then runs the pipeline. Output lands in `docs/spitball/<topic-slug>/`:
+
+| File | Contents |
+|------|----------|
+| `map.json` | the obvious clusters with member ideas, and the negative fringe |
+| `candidates.jsonl` | every candidate with its scores and band verdict |
+| `result.md` | the ranked final 3–5 and why each survived |
+
+Spitballing returns a measured *set* and never picks for you. To refine one
+option into a design, use brainstorming.
+
+## How it works
+
+1. **MAP.** 12 independent agents answer the request blind. Any cluster ≥25%
+   of them produce is the **obvious set**. The **negative fringe** names what
+   almost fulfills but fails.
+2. **SAMPLE.** Generate candidates aimed at the **band**: high value, low
+   obviousness, hugging the negative border.
+3. **CONVERGE.** Score each candidate for value (against the brief's
+   fulfillment criterion) and obviousness (membership test against the mapped
+   clusters). Keep the band (value ≥ 0.6, not obvious) and rank by
+   `0.6·fringe + 0.4·value`: surprise leads, value is the floor.
+
+### Design
+
+- **Deterministic kernel, semantic judge.** The skill makes the judgments; a
+  Python kernel (`python -m tools.spitball obvious|rank|fringe-check`, JSON in,
+  JSON out) does every cutoff, filter, and ranking. Changing a threshold is a
+  diff, not prompt archaeology.
+- **Membership tests, not re-polling.** Obviousness is decided against the
+  frozen panel map. Polling a fresh panel would show it the candidate and bias
+  the verdict.
+- **Contract tests** bind the skill text, the kernel, and the artifact formats,
   so a change to one that breaks another fails `make test`.
 
-The ablation study below is retired. Its rating-collection and scoring code is
-in `attic/`; its generation workflow and canon-fidelity judge were deleted. Its
-documents remain as a record.
+The [Socratic-method run](docs/spitball/socratic-method-demos/result.md) shows
+why the map stage matters: all 12 panelists produced questioning *techniques*
+instead of ways to *demonstrate* the method, and the map surfaced that
+misreading as data before sampling began.
 
-- **Pre-registered ablations.** The engine ablation study fixes hypotheses,
-  arms, thresholds, and exclusion rules before any data collection
-  ([`docs/ablation/preregistration.md`](docs/ablation/preregistration.md));
-  amendments are legitimate only pre-data.
-- **Frozen ground truth.** The canon-fidelity judge scored against a
-  human-authored, one-page canon of checkable, discriminative constraints
-  ([`docs/ablation/canon-daria.md`](docs/ablation/canon-daria.md)). Revising
-  the canon is a new study condition, not a silent edit.
-- **Blind rating panels** with multiple independent raters per dimension.
-  Instruments were validated on synthetic LLM raters only; no paid or human
-  ratings were collected, and the phase-1 blinding check failed
-  ([`docs/ablation/phase1-blocked-findings.md`](docs/ablation/phase1-blocked-findings.md)).
+## Development
 
-## Layout
+```
+git clone https://github.com/aalpar/spitballing && cd spitballing
+make install   # register this checkout as a marketplace; install or update the plugin
+```
 
-    skills/spitballing/SKILL.md   the semantic procedure (MAP / SAMPLE / CONVERGE)
-    tools/spitball/               deterministic kernel: panel.py, band.py, fringe.py
-    tools/inspect/                run inspector pages (make inspect)
-    tools/eval/, eval/            headless skill evals (make eval) and their briefs/prompts
-    docs/spitball/<run>/          complete runs: candidates.jsonl, map.json, result.md
-    docs/ablation/                preregistration, findings, canon ground truth
-    docs/specs/                   design docs
-    attic/                        retired ablation harness
+| Target | Does |
+|--------|------|
+| `make test` | unit + contract tests |
+| `make check RUN=docs/spitball/<topic>` | validate one run's artifacts |
+| `make inspect` / `make open` | build (and open) an inspector page per run, plotting every candidate on value × obviousness with the kernel's keep/cut verdict |
+| `make eval BRIEF=… PROMPT=…` | one headless skill run, archived to `eval/runs/` (spends a full 12-agent panel) |
+| `make help` | all targets |
+
+### Layout
+
+```
+skills/spitballing/   the skill: MAP / SAMPLE / CONVERGE procedure
+tools/spitball/       deterministic kernel: panel.py, band.py, fringe.py
+tools/inspect/        run inspector pages
+tools/eval/, eval/    headless skill evals and their briefs/prompts
+docs/spitball/        complete runs
+docs/specs/           design docs
+docs/ablation/        retired ablation study
+attic/                retired ablation harness (needs numpy, scipy)
+```
+
+## Ablation study (retired)
+
+An engine ablation study was
+[pre-registered](docs/ablation/preregistration.md) against a human-authored
+[canon](docs/ablation/canon-daria.md) with blind rating panels. It never
+reached human ratings: instruments were validated on synthetic LLM raters
+only, and the [phase-1 blinding check failed](docs/ablation/phase1-blocked-findings.md).
+The documents remain as a record; the rating and scoring code is in `attic/`.
 
 ## License
 
