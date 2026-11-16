@@ -11,11 +11,11 @@ behavior.
 
 | # | Toy | v | f |
 |---|-----|---|---|
-| 1 | **Summon Cord**: a perch-side pull lever on a stainless bead chain, run through rigid tubing outside the cage, that rings a bell beside the owner across the room, so the bird can call its flock on demand. | 0.80 | 0.80 |
-| 2 | **Window Watch**: a perch at a window with a wild-bird feeder outside the glass. | 0.65 | 0.80 |
-| 3 | **Lazy Susan Perch**: a turntable platform the bird spins by walking along its rim. | 0.60 | 0.80 |
-| 4 | **Drop Chute**: the bird drops a light ball into a funnel at head height; it rattles down a chime spiral into a cup at foot level on the same perch, ready for the next drop. | 0.80 | 0.55 |
-| 5 | **Pocket Jungle**: a potted bird-safe herb or spider plant to clamber through and nibble. | 0.70 | 0.60 |
+| 1 | **Summon Cord: a perch-side pull lever on a stainless bead chain, run through rigid tubing outside the cage, that rings a bell beside the owner across the room, so the bird can call its flock on demand** | 0.80 | 0.80 |
+| 2 | **Window Watch: a perch at a window with a wild-bird feeder outside the glass** | 0.65 | 0.80 |
+| 3 | **Lazy Susan Perch: a turntable platform the bird spins by walking along its rim** | 0.60 | 0.80 |
+| 4 | **Drop Chute: the bird drops a light ball into a funnel at head height; it rattles down a chime spiral into a cup at foot level on the same perch, ready for the next drop** | 0.80 | 0.55 |
+| 5 | **Pocket Jungle: a potted bird-safe herb or spider plant to clamber through and nibble** | 0.70 | 0.60 |
 
 Why each fulfills / why it isn't obvious:
 
