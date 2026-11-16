@@ -34,6 +34,11 @@ Every panelist reached for a temperature word; the band leans on two metaphors
 none of them touched, *shade* and *relief*. Full run:
 [`docs/spitball/head-cool-product-names/`](docs/spitball/head-cool-product-names/result.md).
 
+The [pantry-dinner run](docs/spitball/pantry-dinner/result.md) (a dinner from
+lentils, a lemon, eggs, and stale bread) is set up as a human test: its value
+scores are the model's own, so it carries a cook test, top two band dishes
+against an obvious-set control. The results table is not yet filled in.
+
 ## Install
 
 ```
