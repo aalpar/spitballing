@@ -1,5 +1,7 @@
 # Spitballing
 
+[![test](https://github.com/aalpar/spitballing/actions/workflows/test.yml/badge.svg)](https://github.com/aalpar/spitballing/actions/workflows/test.yml)
+[![version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Faalpar%2Fspitballing%2Fmaster%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version)](.claude-plugin/plugin.json)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 A [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) plugin for
