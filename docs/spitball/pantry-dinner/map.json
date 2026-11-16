@@ -1,0 +1,174 @@
+{
+ "value_criterion": "a complete, cookable dinner that tastes good and uses only lentils, a lemon, eggs, stale bread (plus water, salt, oil, dried spices and dried herbs)",
+ "pantry_rule": "free: water, salt, oil, any dried spice or dried herb from a home spice rack (incl. garlic/onion powder, mustard powder). Out: fresh aromatics, dairy, flour, sugar, vinegar, stock, baking soda.",
+ "measured": true,
+ "predicates": [
+  "COMPLETE-DINNER",
+  "COOKABLE",
+  "TASTES-GOOD",
+  "PANTRY-ONLY"
+ ],
+ "obvious_clusters": [
+  {
+   "label": "bound-fritters",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "roles": "lentil: mashed body; egg: binder; bread: crumb binder/crust; fried",
+   "member_ideas": [
+    "Lentil fritters (lentils, egg, breadcrumbs)",
+    "Lentil croquettes (egg-and-breadcrumb crusted)",
+    "Lentil and breadcrumb patties with lemon",
+    "Spiced lentil patties with lemon dressing"
+   ]
+  },
+  {
+   "label": "eggs-poached-in-lentils",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "roles": "lentil: spiced stew; egg: poached/baked in it (shakshuka logic)",
+   "member_ideas": [
+    "Lentil shakshuka (eggs baked in spiced lentils)",
+    "Shakshuka-style eggs poached in spiced lentil stew"
+   ]
+  },
+  {
+   "label": "mujaddara-crispy-topping",
+   "panelist_count": 12,
+   "frac": 1.0,
+   "roles": "lentil: dry-cooked pilaf base; bread: fried crumb/crouton topping; egg: fried, on top",
+   "member_ideas": [
+    "Mujaddara-style lentils with fried breadcrumbs and a fried egg",
+    "Mujadara-style lentils with croutons and fried eggs"
+   ]
+  },
+  {
+   "label": "egg-lemon-emulsion",
+   "panelist_count": 11,
+   "frac": 0.917,
+   "roles": "egg+lemon: tempered liaison thickening lentil broth (avgolemono)",
+   "member_ideas": [
+    "Egg-lemon (avgolemono) lentil soup",
+    "Lemony lentil soup with egg drop (avgolemono-style)"
+   ]
+  },
+  {
+   "label": "lentil-pot-egg-garnish",
+   "panelist_count": 11,
+   "frac": 0.917,
+   "roles": "lentil: soup/dal/curry; egg: cooked separately, garnish or side; bread: side or croutons",
+   "member_ideas": [
+    "Lentil soup with lemon and a poached egg",
+    "Spiced lentil dal with garlic croutons and a soft-boiled egg",
+    "Lentil and egg curry",
+    "Masoor dal with tadka, toast, and boiled eggs"
+   ]
+  },
+  {
+   "label": "bread-thickened-stew",
+   "panelist_count": 8,
+   "frac": 0.667,
+   "roles": "bread: dissolved into hot lentil stew as thickener (ribollita/panade)",
+   "member_ideas": [
+    "Ribollita-style lentil and bread soup",
+    "Lentil and bread panade (baked)",
+    "Lentil and bread panade, baked with eggs"
+   ]
+  },
+  {
+   "label": "egg-set-bake",
+   "panelist_count": 7,
+   "frac": 0.583,
+   "roles": "egg: set custard matrix holding lentils/bread (frittata, omelette, strata)",
+   "member_ideas": [
+    "Spiced lentil and bread-crumb frittata",
+    "Lentil-stuffed omelette with lemon breadcrumbs",
+    "Lentil and bread strata"
+   ]
+  },
+  {
+   "label": "fatteh-over-bread",
+   "panelist_count": 7,
+   "frac": 0.583,
+   "roles": "bread: toasted base layer under lentils; egg on top",
+   "member_ideas": [
+    "Fattet adas (lentils on toasted bread)",
+    "Lentil stew over toasted bread with a fried egg"
+   ]
+  },
+  {
+   "label": "bread-salad",
+   "panelist_count": 6,
+   "frac": 0.5,
+   "roles": "bread: rehydrated/toasted salad body; lentils + boiled egg tossed in lemon dressing",
+   "member_ideas": [
+    "Lentil panzanella with soft-boiled egg",
+    "Lentil fattoush-style bread salad with lemon dressing and boiled eggs"
+   ]
+  }
+ ],
+ "below_cutoff": [
+  {
+   "label": "migas",
+   "panelist_count": 1,
+   "roles": "bread: fried crumbs as the starch; egg: scrambled through",
+   "member_ideas": [
+    "Migas with lentils and fried eggs"
+   ]
+  }
+ ],
+ "negative_fringe": [
+  {
+   "drops": "COMPLETE-DINNER",
+   "kind": "leave-one-out",
+   "landmark": "pantry-only and good, but a dessert, snack or side",
+   "examples": [
+    "Lemon bread pudding",
+    "Spiced lentil crackers",
+    "Croutons"
+   ]
+  },
+  {
+   "drops": "COOKABLE",
+   "kind": "leave-one-out",
+   "landmark": "pantry-only dinner needing days or special gear",
+   "examples": [
+    "Fermented lentil dosa",
+    "Sprouted lentil salad",
+    "Salt-cured egg yolks"
+   ]
+  },
+  {
+   "drops": "TASTES-GOOD",
+   "kind": "leave-one-out",
+   "landmark": "valid pantry dinner that is grim, or a classic stripped of its defining ingredient",
+   "examples": [
+    "Plain boiled lentils on toast",
+    "Ribollita without vegetables",
+    "Strata without milk or cheese"
+   ]
+  },
+  {
+   "drops": "PANTRY-ONLY",
+   "kind": "leave-one-out",
+   "landmark": "great dinner one off-list staple away",
+   "examples": [
+    "Real shakshuka (tomatoes)",
+    "Mujaddara (onions)",
+    "Fattet (yogurt)"
+   ]
+  }
+ ],
+ "sense_swap_note": "no predicate has a usable figurative reading; none derived",
+ "fringe_check": {
+  "near_miss": 10,
+  "clusters": [
+   {
+    "label": "hollow-classic",
+    "drops": "TASTES-GOOD",
+    "panelists": 9
+   }
+  ],
+  "unmatched": []
+ },
+ "panel_note": "9 of 10 clusters clear 25%, most at >=50%. Not over-splitting: each cluster is a distinct ingredient-role assignment. The panel (12 same-model contexts) covered the familiar role space almost completely."
+}
